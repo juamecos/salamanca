@@ -1,0 +1,27 @@
+html {
+    font-size: 62.5%; // 1rem = 10px
+
+    @include tablet {
+        font-size: 75%; // 1rem = 12px
+    }
+
+    @include large {
+        font-size: 100%; // 1rem = 16px
+    }
+}
+
+body {
+    font-size: 1rem;
+    font-family: Roboto;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: Montez;
+}
+
+h1 {
+    font-size: 4.8rem;
+}

@@ -1,0 +1,10 @@
+.navbar {
+    height: 6rem;
+    display: flex;
+    &__logo {
+        &--text {
+            font-family: Montez;
+            font-size: 3.2rem;
+        }
+    }
+}
