@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaFacebook, FaInstagramSquare, FaEnvelopeSquare } from 'react-icons/fa'
+import { FaFacebook, FaInstagramSquare, FaPhoneSquare } from 'react-icons/fa'
 
 export default [
     {
@@ -11,7 +11,7 @@ export default [
         url: 'https://www.instagram.com/',
     },
     {
-        icon: <FaEnvelopeSquare />,
-        url: 'mailto:elcorreoquequieres@correo.com',
+        icon: <FaPhoneSquare />,
+        url: 'tel:0034961722712',
     },
 ]

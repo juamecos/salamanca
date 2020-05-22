@@ -1,0 +1,12 @@
+.location {
+    min-width: 50rem;
+    font-size: 2rem;
+    color: $color-white;
+    &__container {
+        @include flex-center-column;
+    }
+
+    &__address {
+        padding-top: $pd-tiny;
+    }
+}

@@ -115,10 +115,17 @@
 //   }
 
 // Media queries
+$tiny: 320;
 $mobile: 576;
 $tablet: 768;
 $large: 1024;
 $desktop: 1280;
+
+@mixin mobile-down {
+    @media only screen and (max-width: $mobile * 1px) {
+        @content;
+    }
+}
 
 @mixin mobile {
     @media only screen and (min-width: $mobile * 1px) {

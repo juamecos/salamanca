@@ -1,0 +1,41 @@
+.btn {
+    border-radius: 10000px;
+
+    cursor: pointer;
+    display: inline-block;
+    font-family: inherit;
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    padding: $pd-tiny $pd-medium;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: $mainTransition;
+
+    &:active {
+        position: relative;
+        top: 1px;
+    }
+
+    &--hero {
+        background-color: transparent;
+        color: $color-primary-dark;
+        border: 2px solid $color-primary-dark;
+        &:hover {
+            background-color: $color-primary-dark;
+            color: $color-white;
+        }
+    }
+
+    &--section {
+        background-color: transparent;
+        border: 2px solid $color-secondary;
+        color: $color-secondary;
+        margin: 0 auto;
+
+        &:hover {
+            background-color: $color-secondary;
+            color: $color-white;
+        }
+    }
+}

@@ -1,0 +1,15 @@
+.social-icons {
+    align-items: center;
+    display: flex;
+    line-height: 0;
+
+    a {
+        color: $color-white;
+        margin: 0 0.5rem;
+        font-size: 2.4rem;
+        &:hover {
+            color: lighten($color-secondary, 40%);
+            transform: translateY(-1px);
+        }
+    }
+}

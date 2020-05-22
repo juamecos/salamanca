@@ -4,8 +4,8 @@ export default [
         text: 'inicio',
     },
     {
-        path: '/nosotros',
-        text: 'sobre nosotros',
+        path: '/restaurante',
+        text: 'restaurante',
     },
     {
         path: '/carta',

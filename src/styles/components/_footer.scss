@@ -1,0 +1,94 @@
+.footer {
+    background-color: $color-primary;
+    font-size: 1.8rem;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 90%;
+        padding: $pd-medium;
+
+        @include large {
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: space-between;
+            margin: 0 auto;
+            max-width: 80%;
+        }
+    }
+
+    & .social-icons {
+        @include flex-center;
+        justify-content: space-around;
+
+        @include mobile {
+            margin: 0 auto;
+            max-width: 50rem;
+            min-width: 50rem;
+        }
+
+        @include large {
+            align-items: flex-start;
+            flex-direction: column;
+            margin: 0 $mg-medium;
+            max-width: none;
+            min-width: 0;
+            flex-basis: 1;
+        }
+
+        & a {
+            font-size: 3rem;
+
+            @include large {
+                font-size: 4rem;
+
+                &:not(:last-child) {
+                    padding-bottom: $pd-small;
+                }
+            }
+        }
+    }
+
+    &__links {
+        color: $color-white;
+        height: 100%;
+        padding: $pd-medium 0;
+        text-align: center;
+
+        @include large {
+            @include flex-center-column;
+            align-items: flex-start;
+            padding: 0;
+        }
+    }
+
+    &__link {
+        @include large {
+            font-size: 2rem;
+
+            &:not(:last-child) {
+                padding-right: $pd-large;
+            }
+        }
+
+        &:hover {
+            color: lighten($color-secondary, 40%);
+        }
+
+        & > * {
+            display: block;
+            letter-spacing: $mainSpacing;
+            padding: $pd-tiny 0;
+            text-decoration: none;
+            text-transform: capitalize;
+            transition: $mainTransition;
+        }
+    }
+
+    &__copyright {
+        color: $color-white;
+        padding: $pd-tiny 0;
+        text-align: center;
+    }
+}

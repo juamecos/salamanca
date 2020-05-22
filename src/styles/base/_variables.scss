@@ -1,18 +1,45 @@
 // colors
-$color-white: #dae1e7;
+$color-white: #f7f7f7;
 $color-primary-dark: #142850;
 $color-primary: #27496d;
 $color-secondary: #00909e;
+$color-sand: #c2b280;
+$color-sand-light: #efe8d4;
+$color-shadow: #757a848a;
 
 // fonts
 
-$font-primary: 'ubuntu';
-$font-secondary: 'Baloo Toma 2';
+$font-big-text: 'Montez';
+$font-primary: 'Roboto';
+$font-secondary: 'Montserrat';
 
-$mainSpacing: 4px;
+// paddings
+$pd-tiny: 1rem;
+$pd-small: 2rem;
+$pd-medium: 3rem;
+$pd-large: 4rem;
+$pd-big: 6rem;
+$pd-huge: 8rem;
+
+//margins
+$mg-tiny: 1rem;
+$mg-small: 2rem;
+$mg-medium: 3rem;
+$mg-large: 4rem;
+$mg-big: 6rem;
+$mg-huge: 8rem;
+
+$mainSpacing: 0.3rem;
 $mainTransition: all 0.3s linear;
 
 // Shadows
 
-$light-shadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
-$dark-shadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
+$logo-shadow: 2px 2px 1px $color-secondary;
+
+$light-shadow: 2px 5px 3px 0px $color-shadow;
+$dark-shadow: 4px 10px 5px 0px $color-shadow;
+
+// container
+
+$container-width: 90%;
+$container-margin: $pd-medium;
