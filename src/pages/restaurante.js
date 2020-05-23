@@ -1,7 +1,8 @@
 import React from 'react'
+import Layout from '../components/Layout'
 
 const Restaurante = () => {
-    return <div>this is from restaurante</div>
+    return <Layout></Layout>
 }
 
 export default Restaurante

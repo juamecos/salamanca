@@ -43,6 +43,7 @@ const StyledBackgroundSection = styled(BackgroundSection)`
             : 'none'};
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
     display: flex;
     justify-content: center;
     align-items: center;

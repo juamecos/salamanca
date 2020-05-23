@@ -4,9 +4,9 @@ import Layout from '../components/Layout'
 import StyledBackgroundSection from '../components/StyledBackgroundSection'
 import Banner from '../components/Banner'
 import { graphql } from 'gatsby'
-
 import About from '../components/Home/SectionAbout'
 import Especialidades from '../components/Home/SectionEspecialidades'
+import StyledParallaxComponent from './ParallaxComponent'
 
 export default ({ data }) => (
     <Layout>
@@ -21,11 +21,13 @@ export default ({ data }) => (
             </Banner>
         </StyledBackgroundSection>
         <About />
+
+        <StyledParallaxComponent clasName="parallax"></StyledParallaxComponent>
+
         <Especialidades />
     </Layout>
 )
 
-// TODO query for metadata title, info
 export const query = graphql`
     query HomePageQuery {
         site {

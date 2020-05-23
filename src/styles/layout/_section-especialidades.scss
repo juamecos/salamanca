@@ -1,21 +1,35 @@
 .especialidades {
     background-color: $color-sand-light;
+    font-size: 1.6rem;
 
     &__container {
-        width: $container-width;
         margin: 0 auto;
-        @include flex-column;
+        max-width: 50rem;
+        width: $container-width;
+
+        @include large {
+            align-items: center;
+            display: grid;
+            gap: 5%;
+            grid-template-columns: repeat(2, 1fr);
+            margin-bottom: $mg-big;
+            max-width: 70%;
+        }
+
+        @include desktop {
+            grid-template-columns: repeat(3, 1fr);
+            margin-bottom: $mg-medium;
+        }
     }
 
     &__block {
-        position: relative;
         box-shadow: $light-shadow;
         color: $color-primary-dark;
+        margin-bottom: $pd-big;
 
-        margin-bottom: $pd-large;
-    }
-
-    &__image {
+        @include large {
+            margin-bottom: 0;
+        }
     }
 
     &__text {

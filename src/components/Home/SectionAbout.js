@@ -21,20 +21,31 @@ const SectionAbout = ({ data }) => {
                     />
                 </article>
                 <article className="section-about__text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Beatae aliquam quasi tenetur? Facere ex natus modi quam
-                    accusantium ab incidunt, neque tempora at maiores deleniti
-                    deserunt nobis. Eaque, unde repudiandae!
+                    <p>
+                        El RESTAURANTE SALAMANCA está situado en la playa de San
+                        Antonio de Cullera. Cada año miles de personas nos
+                        visitan y disfrutan de una comida buena y de calidad,{' '}
+                        <span className="highlighted">frente a la playa.</span>
+                    </p>
+                    <p>
+                        El plato típico del restaurante es{' '}
+                        <span className="highlighted">la paella</span>, en
+                        cambio, muchos de nuestros clientes aprecian nuestra
+                        forma de elaborar{' '}
+                        <span className="highlighted">
+                            zarzuelas y mariscadas.
+                        </span>
+                    </p>
                 </article>
-                <AniLink
-                    fade
-                    to="/restaurante"
-                    alt="Boton a página restaurante"
-                    className="btn btn--section"
-                >
-                    Restaurante
-                </AniLink>
             </div>
+            <AniLink
+                fade
+                to="/restaurante"
+                alt="Boton a página restaurante"
+                className="btn btn--section btn--restaurante"
+            >
+                Restaurante
+            </AniLink>
         </Section>
     )
 }

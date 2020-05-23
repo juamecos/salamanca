@@ -2,12 +2,23 @@
     @include flex-center-column;
 
     &__container {
-        width: $container-width;
+        box-shadow: $light-shadow;
+        margin-bottom: $mg-big;
         text-align: center;
+        width: $container-width;
+        max-width: 70rem;
+
+        @include large {
+            box-shadow: none;
+            position: relative;
+        }
     }
 
     &__images {
-        box-shadow: $light-shadow;
+        @include large {
+            width: 60rem;
+            box-shadow: $light-shadow;
+        }
     }
 
     &__text {
@@ -15,12 +26,23 @@
         box-shadow: $light-shadow;
         color: $color-primary-dark;
         // font-family: $font-secondary;
-        font-size: 1.8rem;
+        font-size: 1.6rem;
         height: fit-content;
-        padding: $pd-medium;
-        margin-bottom: $mg-large;
+        padding: $pd-large $pd-small;
         text-align: left;
 
-        @include flex-center-vert;
+        @include flex-column;
+
+        & p:not(:last-child) {
+            padding-bottom: $pd-small;
+        }
+
+        @include large {
+            position: absolute;
+            top: 15%;
+            left: 50%;
+            box-shadow: $dark-shadow;
+            max-width: 60%;
+        }
     }
 }

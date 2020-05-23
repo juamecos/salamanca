@@ -38,16 +38,15 @@ const SectionEspecialidades = ({ data }) => {
                         </caption>
                     </article>
                 ))}
-
-                <AniLink
-                    fade
-                    to="/carta"
-                    alt="Boton a página carta"
-                    className="btn btn--section"
-                >
-                    Carta
-                </AniLink>
             </div>
+            <AniLink
+                fade
+                to="/carta"
+                alt="Boton a página carta"
+                className="btn btn--section"
+            >
+                Carta
+            </AniLink>
         </Section>
     )
 }
@@ -61,14 +60,16 @@ export const getEspecialidades = graphql`
                 }
             }
         }
-        paellabogavante: file(relativePath: { eq: "paella-bogavante.jpg" }) {
+        paellabogavante: file(
+            relativePath: { eq: "paella-bogavante-1440.jpg" }
+        ) {
             childImageSharp {
                 fluid {
                     ...GatsbyImageSharpFluid
                 }
             }
         }
-        mariscada: file(relativePath: { eq: "mariscada.jpg" }) {
+        mariscada: file(relativePath: { eq: "mariscada-1440.jpg" }) {
             childImageSharp {
                 fluid {
                     ...GatsbyImageSharpFluid

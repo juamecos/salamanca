@@ -1,6 +1,7 @@
 .title {
-    padding-bottom: $pd-large;
+    padding-bottom: $pd-big;
     text-align: center;
+    text-shadow: 2px 2px 3px $color-shadow;
 
     &__title {
         color: $color-primary;
@@ -19,7 +20,6 @@
         background-color: $color-sand;
         height: 0.3rem;
         margin: 0 auto;
-
-        width: 15%;
+        width: 8rem;
     }
 }
