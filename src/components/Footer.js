@@ -1,8 +1,10 @@
 import React from 'react'
-import SocialIcons from './SocialIcons'
 import links from '../constants/links'
 import AniLink from 'gatsby-plugin-transition-link/AniLink'
-import Location from './Location'
+import loadable from '@loadable/component'
+
+const Location = loadable(() => import('./Location'))
+const SocialIcons = loadable(() => import('./SocialIcons'))
 
 const Footer = () => {
     return (

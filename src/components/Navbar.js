@@ -2,7 +2,10 @@ import React, { useState } from 'react'
 import { FaAlignJustify } from 'react-icons/fa'
 import links from '../constants/links'
 import AniLink from 'gatsby-plugin-transition-link/AniLink'
-import SocialIcons from './SocialIcons'
+import loadable from '@loadable/component'
+
+const SocialIcons = loadable(() => import('./SocialIcons'))
+
 const Navbar = () => {
     const [isOpen, setNav] = useState(false)
     const toggleNav = () => {
