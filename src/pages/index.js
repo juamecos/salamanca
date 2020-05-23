@@ -6,7 +6,7 @@ import Banner from '../components/Banner'
 import { graphql } from 'gatsby'
 import About from '../components/Home/SectionAbout'
 import Especialidades from '../components/Home/SectionEspecialidades'
-import StyledParallaxComponent from './ParallaxComponent'
+import StyledParallaxComponent from '../components/ParallaxComponent'
 
 export default ({ data }) => (
     <Layout>
