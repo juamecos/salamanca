@@ -29,14 +29,14 @@
 
     &--section {
         background-color: transparent;
-        border: 2px solid $color-secondary;
-        color: $color-secondary;
+        border: 2px solid $color-primary-dark;
+        color: $color-primary-dark;
         margin: 0 auto;
         max-width: fit-content;
         text-align: center;
 
         &:hover {
-            background-color: $color-secondary;
+            background-color: $color-primary-dark;
             color: $color-white;
         }
     }

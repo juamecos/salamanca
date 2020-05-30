@@ -62,10 +62,6 @@
 
     .show-nav {
         height: 215px;
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        flex-direction: column;
     }
 
     &__links {
@@ -73,10 +69,17 @@
         overflow: hidden;
         transition: $mainTransition;
         list-style-type: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
 
         @include large {
             height: auto;
             display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            flex-direction: row;
         }
 
         & a {

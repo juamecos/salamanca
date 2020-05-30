@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 import BackgroundImage from 'gatsby-background-image'
 
-const BackgroundSection = ({ className, children, home }) => (
+const BackgroundSection = ({ className, children, home, image }) => (
     <StaticQuery
         query={graphql`
             query {
@@ -24,7 +24,7 @@ const BackgroundSection = ({ className, children, home }) => (
                 <BackgroundImage
                     // Tag="section"
                     className={className}
-                    fluid={imageData}
+                    fluid={image || imageData}
                     home={home}
                 >
                     {children}
@@ -47,7 +47,7 @@ const StyledBackgroundSection = styled(BackgroundSection)`
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 1px 1px 20px #142850;
+    // box-shadow: 1px 1px 20px #142850;
 `
 
 export default StyledBackgroundSection

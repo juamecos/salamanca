@@ -1,7 +1,32 @@
 import React from 'react'
+import Layout from '../components/Layout'
+import { graphql } from 'gatsby'
+import StyledBackgroundSection from '../components/StyledBackgroundSection'
+import TagList from '../components/Carta/TagList'
 
-const carta = () => {
-    return <div>This is from carta page</div>
+const carta = ({ data, location }) => {
+    return (
+        <Layout>
+            <StyledBackgroundSection
+                className="cartaHero"
+                home={false}
+                image={data.carta.childImageSharp.fluid}
+            />
+            <TagList />
+        </Layout>
+    )
 }
 
 export default carta
+
+export const query = graphql`
+    query {
+        carta: file(relativePath: { eq: "carta.jpg" }) {
+            childImageSharp {
+                fluid(quality: 90, maxWidth: 4160) {
+                    ...GatsbyImageSharpFluid_withWebp
+                }
+            }
+        }
+    }
+`

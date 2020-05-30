@@ -1,7 +1,8 @@
 import React from 'react'
+import Layout from '../components/Layout'
 
 const contacto = () => {
-    return <div>This is from contato</div>
+    return <Layout></Layout>
 }
 
 export default contacto

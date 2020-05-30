@@ -10,14 +10,22 @@ import StyledParallaxComponent from '../components/ParallaxComponent'
 
 export default ({ data }) => (
     <Layout>
-        <StyledBackgroundSection className="styledHero" home={true}>
+        <StyledBackgroundSection
+            className="styledHero"
+            home={true}
+            image={data.hero.childImageSharp.fluid}
+        >
             <Banner
                 title={data.site.siteMetadata.title}
                 info={data.site.siteMetadata.description}
             >
-                <button className="btn btn--hero" alt="botón a reservas">
+                <a
+                    href="/contacto"
+                    className="btn btn--hero"
+                    alt="button to book"
+                >
                     Reserva
-                </button>
+                </a>
             </Banner>
         </StyledBackgroundSection>
         <About />
@@ -34,6 +42,13 @@ export const query = graphql`
             siteMetadata {
                 title
                 description
+            }
+        }
+        hero: file(relativePath: { eq: "playa.jpg" }) {
+            childImageSharp {
+                fluid(quality: 90, maxWidth: 4160) {
+                    ...GatsbyImageSharpFluid_withWebp
+                }
             }
         }
     }

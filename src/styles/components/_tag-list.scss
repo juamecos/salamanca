@@ -1,0 +1,50 @@
+.tag-list {
+    background-color: $color-sand-light;
+
+    &__center {
+        margin: 0 auto;
+        text-align: center;
+        width: 80%;
+        @include flex-center-column;
+
+        @include mobile {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            justify-content: center;
+            justify-items: center;
+            align-items: center;
+            gap: $mg-medium $mg-big;
+        }
+
+        @include tablet {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    &__item {
+        color: $color-white;
+        background: linear-gradient(#27496d 60%, #00909e);
+        border-radius: 1000px;
+
+        @include box(50%, 4rem);
+
+        @include mobile {
+            width: 100%;
+        }
+
+        &:not(:first-child) {
+            margin-top: $mg-medium;
+
+            @include mobile {
+                margin: 0;
+            }
+        }
+    }
+
+    &__link {
+        display: inline-block;
+        font-size: 2rem;
+        @include box(100%, 100%);
+        @include flex-center;
+    }
+}

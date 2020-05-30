@@ -26,10 +26,16 @@
         box-shadow: $light-shadow;
         color: $color-primary-dark;
         margin-bottom: $pd-big;
+        overflow: hidden;
+        transition: 2s transform ease-out;
 
         @include large {
             margin-bottom: 0;
         }
+    }
+
+    &__image:hover {
+        transform: scale(1.02) rotateZ(1deg);
     }
 
     &__text {
