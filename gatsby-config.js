@@ -10,9 +10,9 @@ require('dotenv').config({
 
 module.exports = {
     siteMetadata: {
-        title: `Rte. Salamanca`,
+        title: `Restaurante Salamanca`,
         siteUrl: `https://www.gatsbyjs.org`,
-        description: `Cocina mediterránea a la orilla del mar. Especialidad en zarzuelas, arroces y mariscos.`,
+        description: `Cocina mediterránea a la orilla del mar. Especialidad en mariscadas, zarzuelas, arroces y tapas. Fundado en 1991.`,
         twitterUsername: '@JuanJosMenaCost',
         image: '/hero-image.jpg',
         siteUrl: 'https://gatsby-contentful-portfolio-blog.netlify.app/',
@@ -24,6 +24,14 @@ module.exports = {
             options: {
                 name: `images`,
                 path: `${__dirname}/src/images`,
+                // ignore: `**/*.svg`,
+            },
+        },
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                name: `images`,
+                path: `${__dirname}/src/images/categorias`,
             },
         },
         {
@@ -31,12 +39,12 @@ module.exports = {
             options: {
                 fonts: [
                     {
-                        family: `Montserrat`,
-                        variants: [`400`, `700`],
+                        family: `Open Sans`,
+                        variants: [`600`],
                     },
                     {
                         family: `Roboto`,
-                        variants: [`400`, `700`],
+                        variants: [`500`],
                     },
                     {
                         family: `Montez`,
@@ -64,9 +72,9 @@ module.exports = {
 
                 // Setup locale fallbacks
                 // In this example, if some field value is missing in Italian, fall back to English
-                localeFallbacks: {
-                    en: ['es'],
-                },
+                // localeFallbacks: {
+                //     en: ['es'],
+                // },
             },
         },
         {
@@ -88,10 +96,11 @@ module.exports = {
             resolve: 'gatsby-plugin-react-svg',
             options: {
                 rule: {
-                    include: /assets/,
+                    include: /\.inline\.svg$/,
                 },
             },
         },
+
         `gatsby-plugin-sharp`,
         `gatsby-plugin-styled-components`,
         `gatsby-transformer-sharp`,

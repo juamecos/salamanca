@@ -2,30 +2,40 @@ import React from 'react'
 import ProductSection from './ProductSection'
 
 const Products = ({ data, location }) => {
+    console.log(data)
+
+    const {
+        arroces,
+        bodega,
+        carne,
+        ensaladas,
+        entrantes,
+        pescado,
+        postres,
+        tapas,
+    } = data
+    console.log(carne)
+
+    // return <div className="test">esto es de products</div>
+
     switch (location.pathname) {
-        case '/carta/arroz':
-            return <ProductSection data={data.arroz} />
+        case '/carta/arroces-y-paellas':
+            return <ProductSection data={arroces} />
+        case '/carta/carnes':
+            return <ProductSection data={carne} />
+        case '/carta/ensaladas':
+            return <ProductSection data={ensaladas} />
+        case '/carta/entrantes':
+            return <ProductSection data={entrantes} />
+        case '/carta/pescados-y-mariscos':
+            return <ProductSection data={pescado} />
+        case '/carta/postres':
+            return <ProductSection data={postres} />
 
-        case '/carta/carne':
-            return <ProductSection data={data.carne} />
-
-        case '/carta/ensalada':
-            return <ProductSection data={data.ensalada} />
-
-        case '/carta/entrante':
-            return <ProductSection data={data.entrante} />
-
-        case '/carta/marisco':
-            return <ProductSection data={data.marisco} />
-
-        case '/carta/pescado':
-            return <ProductSection data={data.pescado} />
-
-        case '/carta/postre':
-            return <ProductSection data={data.postre} />
-
-        case '/carta/zarzuela':
-            return <ProductSection data={data.zarzuela} />
+        case '/carta/bodega':
+            return <ProductSection data={bodega} />
+        case '/carta/tapas':
+            return <ProductSection data={tapas} />
         default:
             return
     }

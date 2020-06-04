@@ -3,6 +3,7 @@ import { FaAlignJustify } from 'react-icons/fa'
 import links from '../constants/links'
 import AniLink from 'gatsby-plugin-transition-link/AniLink'
 import loadable from '@loadable/component'
+import Logo from '../images/logo.inline.svg'
 
 const SocialIcons = loadable(() => import('./SocialIcons'))
 
@@ -18,7 +19,7 @@ const Navbar = () => {
             <div className="navbar__wrapper">
                 <div className="navbar__header">
                     <div className="navbar__logo">
-                        <div className="navbar__logo--text">Rte.Salamanca</div>
+                        <Logo className="navbar__logo--image" />
                     </div>
                     <button
                         type="button"

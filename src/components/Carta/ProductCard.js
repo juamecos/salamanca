@@ -1,47 +1,26 @@
 import React from 'react'
-import { FaChevronDown, FaChevronUp } from 'react-icons/fa'
+// import Gluten from '../images/gluten.inline.svg'
 
 const ProductCard = ({ data }) => {
-    const {
-        titulo,
-        descripcion,
-        precio,
-        precioPorPersona,
-        minimo2Personas,
-        alergenos,
-    } = data
+    const { titulo, descripcion, precio, alergenos } = data
+    const alergenosNumbers = alergenos.map(item => item.charAt(0)) // Get the first character
 
     return (
-        <li className="product_item" key={titulo}>
-            <details className="product__details">
-                <summary className="product__summary">
-                    <h4>
-                        {titulo} <FaChevronDown />
-                    </h4>
-                </summary>
-                <div className="product__info">
-                    <h2>{descripcion}</h2>
-                    <div className="product__price">
-                        {precioPorPersona ? (
-                            <div>
-                                <span>Precio por persona</span>
-                                <span>{precio}</span>
-                            </div>
-                        ) : (
-                            <span>{precio}</span>
-                        )}
-                    </div>
-                    <div className="product__min2">
-                        {minimo2Personas ? 'Min. 2 personas' : null}
-                    </div>
-                    <div>
-                        {alergenos.map((alergeno, index) => {
-                            return <h6 key={index}>{alergeno}</h6>
-                        })}
-                    </div>
-                    <FaChevronUp />
+        <li className="product__card" key={titulo}>
+            <div className="product__title">{titulo}</div>
+            {descripcion ? (
+                <div className="product__description">{descripcion}</div>
+            ) : null}
+            <div className="product__price">{precio}</div>
+            {alergenos ? (
+                <div className="product__allergens">
+                    {alergenosNumbers.map((item, index) => (
+                        <div className="product__allergen" key={index}>
+                            {item}
+                        </div>
+                    ))}
                 </div>
-            </details>
+            ) : null}
         </li>
     )
 }

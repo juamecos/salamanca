@@ -1,25 +1,57 @@
 import React from 'react'
 import Title from '../Title'
 import { useStaticQuery, graphql } from 'gatsby'
+
 import AniLink from 'gatsby-plugin-transition-link/AniLink'
+import Img from 'gatsby-image'
+
+const getInfo = graphql`
+    query {
+        categories: allDatoCmsCategorie(
+            filter: { locale: { eq: "es" } }
+            sort: { fields: orden }
+        ) {
+            edges {
+                node {
+                    slug
+                    category
+                    imagencategory {
+                        fluid {
+                            ...GatsbyDatoCmsFluid_noBase64
+                        }
+                    }
+                }
+            }
+        }
+    }
+`
 
 const TagList = () => {
-    const response = useStaticQuery(getTags)
-    const tags = response.allTags.edges
+    const response = useStaticQuery(getInfo)
+    const categories = response.categories.edges
+
+    console.log(categories)
 
     return (
         <section className="tag-list section">
             <Title title="Nuestra" message="Carta" />
             <div className="tag-list__center">
-                {tags.map(({ node }) => {
+                {categories.map(item => {
                     return (
-                        <div className="tag-list__item" key={node.apiKey}>
+                        <div className="tag-list__item" key={item.node.slug}>
                             <AniLink
-                                to={`/carta/${node.apiKey}`}
-                                alt={`link a ${node.apiKey}`}
+                                fade
+                                to={`/carta/${item.node.slug}`}
+                                alt={`link a ${item.node.category}`}
                                 className="tag-list__link"
                             >
-                                {node.name}
+                                <Img
+                                    fluid={item.node.imagencategory.fluid}
+                                    className="tag-list__image"
+                                />
+                                <div className="tag-list__text">
+                                    {item.node.category}
+                                </div>
                             </AniLink>
                         </div>
                     )
@@ -31,15 +63,19 @@ const TagList = () => {
 
 export default TagList
 
-export const getTags = graphql`
-    query MyQuery {
-        allTags: allDatoCmsModel(sort: { order: ASC, fields: name }) {
-            edges {
-                node {
-                    name
-                    apiKey
-                }
-            }
-        }
-    }
-`
+// export const query = graphql`
+//     query CartaPageQuery {
+//         allFile(filter: { relativeDirectory: { eq: "categorias" } }) {
+//             edges {
+//                 node {
+//                     relativePath
+//                     childImageSharp {
+//                         fluid {
+//                             src
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// `

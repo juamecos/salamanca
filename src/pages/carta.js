@@ -11,6 +11,7 @@ const carta = ({ data, location }) => {
                 className="cartaHero"
                 home={false}
                 image={data.carta.childImageSharp.fluid}
+                alt="imagen de fondo chica lee carta"
             />
             <TagList />
         </Layout>

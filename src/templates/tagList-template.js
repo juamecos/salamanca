@@ -4,6 +4,8 @@ import Layout from '../components/Layout'
 import Products from '../components/Carta/Products'
 
 const Template = ({ data, location }) => {
+    console.log(data)
+
     return (
         <Layout>
             <Products data={data} location={location} />
@@ -12,100 +14,92 @@ const Template = ({ data, location }) => {
 }
 
 export const query = graphql`
-    query section {
-        arroz: allDatoCmsArroz(filter: { locale: { eq: "es" } }) {
+    query {
+        tapas: allDatoCmsTapa {
             edges {
                 node {
                     titulo
                     precio
                     descripcion
                     alergenos
-                    precioPorPersona
-                    minimo2Personas
+                    slug
                 }
             }
         }
-        carne: allDatoCmsCarne(filter: { locale: { eq: "es" } }) {
+        entrantes: allDatoCmsEntrante {
             edges {
                 node {
                     titulo
                     precio
                     descripcion
                     alergenos
-                    precioPorPersona
-                    minimo2Personas
+                    slug
                 }
             }
         }
-        ensalada: allDatoCmsEnsalada(filter: { locale: { eq: "es" } }) {
+        ensaladas: allDatoCmsEnsalada {
             edges {
                 node {
                     titulo
                     precio
                     descripcion
                     alergenos
-                    precioPorPersona
-                    minimo2Personas
+                    slug
                 }
             }
         }
-        entrante: allDatoCmsEntrante(filter: { locale: { eq: "es" } }) {
+        carne: allDatoCmsCarne {
             edges {
                 node {
                     titulo
                     precio
                     descripcion
                     alergenos
-                    precioPorPersona
-                    minimo2Personas
+                    slug
                 }
             }
         }
-        marisco: allDatoCmsMarisco(filter: { locale: { eq: "es" } }) {
+        pescado: allDatoCmsPescado {
             edges {
                 node {
                     titulo
                     precio
                     descripcion
                     alergenos
-                    precioPorPersona
-                    minimo2Personas
+                    slug
                 }
             }
         }
-        pescado: allDatoCmsPescado(filter: { locale: { eq: "es" } }) {
+        arroces: allDatoCmsArroz {
             edges {
                 node {
                     titulo
                     precio
                     descripcion
                     alergenos
-                    precioPorPersona
-                    minimo2Personas
+                    slug
                 }
             }
         }
-        zarzuela: allDatoCmsZarzuela(filter: { locale: { eq: "es" } }) {
+        postres: allDatoCmsPostre {
             edges {
                 node {
                     titulo
                     precio
                     descripcion
                     alergenos
-                    precioPorPersona
-                    minimo2Personas
+                    slug
                 }
             }
         }
-        postre: allDatoCmsPostre(filter: { locale: { eq: "es" } }) {
+        bodega: allDatoCmsBodega {
             edges {
                 node {
+                    tipo
                     titulo
                     precio
                     descripcion
-                    alergenos
-                    precioPorPersona
-                    minimo2Personas
+                    slug
                 }
             }
         }

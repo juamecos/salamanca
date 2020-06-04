@@ -2,6 +2,7 @@ import React from 'react'
 import links from '../constants/links'
 import AniLink from 'gatsby-plugin-transition-link/AniLink'
 import loadable from '@loadable/component'
+import Logotext from '../images/logotext.inline.svg'
 
 const Location = loadable(() => import('./Location'))
 const SocialIcons = loadable(() => import('./SocialIcons'))
@@ -10,7 +11,7 @@ const Footer = () => {
     return (
         <div className="footer">
             <div className="footer__container">
-                <SocialIcons showInSmallDevices={true} />
+                <Logotext className="footer__logo" alt="logo" />
                 <ul className="footer__links">
                     {links.map((item, index) => {
                         return (
@@ -31,6 +32,7 @@ const Footer = () => {
                     })}
                 </ul>
                 <Location />
+                <SocialIcons showInSmallDevices={true} />
             </div>
             <div className="footer__copyright">
                 copyright &copy; Rte. Salamanca {new Date().getFullYear()}

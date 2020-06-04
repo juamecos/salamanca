@@ -1,0 +1,27 @@
+.product {
+    &__card {
+        @include flex-center-column;
+        border-bottom: 1px solid $color-primary-dark;
+        &:not(:last-child) {
+            padding-bottom: $pd-large;
+        }
+    }
+
+    &__title {
+        color: $color-primary-dark;
+        font-family: $font-big-text;
+        font-size: 3.6rem;
+        padding-bottom: $pd-tiny;
+    }
+
+    &__description {
+        font-family: $font-secondary;
+        font-size: 1.6rem;
+        padding-bottom: $pd-small;
+    }
+
+    &__price {
+        font-family: $font-primary;
+        font-size: 1.4rem;
+    }
+}

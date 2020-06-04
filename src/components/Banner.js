@@ -1,9 +1,10 @@
 import React from 'react'
+import Logotext from '../images/logotext.inline.svg'
 
-const Banner = ({ title, info, children }) => {
+const Banner = ({ info, children }) => {
     return (
         <div className="banner">
-            <h1 className="banner__title">{title}</h1>
+            <Logotext className="banner__title" />
             <h2 className="banner__info">{info}</h2>
             {children}
         </div>
