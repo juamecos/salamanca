@@ -2,13 +2,16 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Products from '../components/Carta/Products'
+import Allergens from '../components/Allergens'
 
 const Template = ({ data, location }) => {
-    console.log(data)
+    const something = data.arroces.edges
+    something.map(item => console.log(item.node.alergenos))
 
     return (
         <Layout>
             <Products data={data} location={location} />
+            <Allergens />
         </Layout>
     )
 }

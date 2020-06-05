@@ -97,6 +97,16 @@ module.exports = {
             options: {
                 rule: {
                     include: /\.inline\.svg$/,
+                    omitKeys: [
+                        'xmlnsDc',
+                        'xmlnsCc',
+                        'xmlnsRdf',
+                        'xmlnsSvg',
+                        'xmlnsSodipodi',
+                        'xmlnsInkscape',
+                        // 'sodipodiDocname',
+                        // 'inkscapeVersion',
+                    ],
                 },
             },
         },

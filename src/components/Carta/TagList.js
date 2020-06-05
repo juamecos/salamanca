@@ -30,8 +30,6 @@ const TagList = () => {
     const response = useStaticQuery(getInfo)
     const categories = response.categories.edges
 
-    console.log(categories)
-
     return (
         <section className="tag-list section">
             <Title title="Nuestra" message="Carta" />
@@ -62,20 +60,3 @@ const TagList = () => {
 }
 
 export default TagList
-
-// export const query = graphql`
-//     query CartaPageQuery {
-//         allFile(filter: { relativeDirectory: { eq: "categorias" } }) {
-//             edges {
-//                 node {
-//                     relativePath
-//                     childImageSharp {
-//                         fluid {
-//                             src
-//                         }
-//                     }
-//                 }
-//             }
-//         }
-//     }
-// `

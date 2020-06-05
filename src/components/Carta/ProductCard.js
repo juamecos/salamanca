@@ -1,9 +1,15 @@
 import React from 'react'
 // import Gluten from '../images/gluten.inline.svg'
 
-const ProductCard = ({ data }) => {
+const ProductCard = ({ data, location }) => {
+    const slung = location.pathname
     const { titulo, descripcion, precio, alergenos } = data
-    const alergenosNumbers = alergenos.map(item => item.charAt(0)) // Get the first character
+
+    // if not bodega alergenos exist then the first character if not null
+    const alergenosNumbers =
+        slung !== '/carta/bodega' ? alergenos.map(item => item.charAt(0)) : null
+
+    console.log(slung)
 
     return (
         <li className="product__card" key={titulo}>
