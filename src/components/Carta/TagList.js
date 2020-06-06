@@ -5,7 +5,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 import AniLink from 'gatsby-plugin-transition-link/AniLink'
 import Img from 'gatsby-image'
 
-const getInfo = graphql`
+export const getInfo = graphql`
     query {
         categories: allDatoCmsCategorie(
             filter: { locale: { eq: "es" } }

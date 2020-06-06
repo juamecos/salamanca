@@ -5,9 +5,6 @@ import Products from '../components/Carta/Products'
 import Allergens from '../components/Allergens'
 
 const Template = ({ data, location }) => {
-    const something = data.arroces.edges
-    something.map(item => console.log(item.node.alergenos))
-
     return (
         <Layout>
             <Products data={data} location={location} />

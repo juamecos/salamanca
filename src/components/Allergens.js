@@ -1,6 +1,4 @@
 import React from 'react'
-import Img from 'gatsby-image'
-import { useStaticQuery, graphql } from 'gatsby'
 import Gluten from '../images/alergenos/gluten.inline.svg'
 import Crustaceos from '../images/alergenos/crustaceos.inline.svg'
 import Huevo from '../images/alergenos/huevo.inline.svg'
@@ -16,29 +14,27 @@ import Sesamo from '../images/alergenos/sesamo.inline.svg'
 import Sulfitos from '../images/alergenos/sulfitos.inline.svg'
 import Soja from '../images/alergenos/soja.inline.svg'
 
-const viewBox = '0 0 263 372'
-const width = 100
-const height = 100
-
-const propis = {
+const props = {
     viewBox: '0 0 263 372',
+    width: '80',
+    height: '80',
 }
 
-const AllergensComponents = [
-    <Gluten viewBox="0 0 263 372" width="100" height="100" />,
-    <Crustaceos viewBox="0 0 263 372" width="100" height="100" />,
-    <Huevo viewBox="0 0 263 372" width="100" height="100" />,
-    <Pescado viewBox="0 0 263 372" width="100" height="100" />,
-    <Cacahuetes viewBox="0 0 263 372" width="100" height="100" />,
-    <Lacteos viewBox="0 0 263 372" width="100" height="100" />,
-    <Frutos viewBox="0 0 263 372" width="100" height="100" />,
-    <Apio viewBox="0 0 263 372" width="100" height="100" />,
-    <Mostaza viewBox="0 0 263 372" width="100" height="100" />,
-    <Altramuces viewBox="0 0 263 372" width="100" height="100" />,
-    <Moluscos viewBox="0 0 263 372" width="100" height="100" />,
-    <Sesamo viewBox="0 0 263 372" width="100" height="100" />,
-    <Sulfitos viewBox="0 0 263 372" width="130" height="130" />,
-    <Soja viewBox="0 0 263 372" width="100" height="100" />,
+export const AllergensComponents = [
+    <Gluten {...props} />,
+    <Crustaceos {...props} />,
+    <Huevo {...props} />,
+    <Pescado {...props} />,
+    <Cacahuetes {...props} />,
+    <Lacteos {...props} />,
+    <Frutos {...props} />,
+    <Apio {...props} />,
+    <Mostaza {...props} />,
+    <Altramuces {...props} />,
+    <Moluscos {...props} />,
+    <Sesamo {...props} />,
+    <Sulfitos {...props} />,
+    <Soja {...props} />,
 ]
 
 // const getPNGS = graphql`
