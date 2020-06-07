@@ -14,55 +14,30 @@ import Sesamo from '../images/alergenos/sesamo.inline.svg'
 import Sulfitos from '../images/alergenos/sulfitos.inline.svg'
 import Soja from '../images/alergenos/soja.inline.svg'
 
-const props = {
+const propierties = {
     viewBox: '0 0 263 372',
     width: '80',
     height: '80',
 }
 
 export const AllergensComponents = [
-    <Gluten {...props} />,
-    <Crustaceos {...props} />,
-    <Huevo {...props} />,
-    <Pescado {...props} />,
-    <Cacahuetes {...props} />,
-    <Lacteos {...props} />,
-    <Frutos {...props} />,
-    <Apio {...props} />,
-    <Mostaza {...props} />,
-    <Altramuces {...props} />,
-    <Moluscos {...props} />,
-    <Sesamo {...props} />,
-    <Sulfitos {...props} />,
-    <Soja {...props} />,
+    <Gluten {...propierties} />,
+    <Crustaceos {...propierties} />,
+    <Huevo {...propierties} />,
+    <Pescado {...propierties} />,
+    <Cacahuetes {...propierties} />,
+    <Lacteos {...propierties} />,
+    <Frutos {...propierties} />,
+    <Apio {...propierties} />,
+    <Mostaza {...propierties} />,
+    <Altramuces {...propierties} />,
+    <Moluscos {...propierties} />,
+    <Sesamo {...propierties} />,
+    <Sulfitos {...propierties} />,
+    <Soja {...propierties} />,
 ]
 
-// const getPNGS = graphql`
-//     query {
-//         pngs: allFile(
-//             filter: {
-//                 relativeDirectory: { eq: "alergenos" }
-//                 extension: { eq: "png" }
-//             }
-//         ) {
-//             edges {
-//                 node {
-//                     childImageSharp {
-//                         fluid {
-//                             ...GatsbyImageSharpFluid_tracedSVG
-//                         }
-//                     }
-//                 }
-//             }
-//         }
-//     }
-// `
-
 const Allergens = () => {
-    // const allergenPGNS = useStaticQuery(getPNGS)
-    // const PNGS = allergenPGNS.pngs.edges
-    // console.log(PNGS)
-
     return (
         <ul className="allergen__list">
             {AllergensComponents.map((item, index) => (
@@ -70,43 +45,8 @@ const Allergens = () => {
                     {item}
                 </li>
             ))}
-
-            {/* {PNGS.map((item, index) => {
-                return (
-                    <li className="allergen__item" key={index}>
-                        <Img
-                            fluid={item.node.childImageSharp.fluid}
-                            className="allergen__item allergen__item--image"
-                        />
-                    </li>
-                )
-            })} */}
-            {/* <Img fluid={data.file.childImageSharp.fluid} /> */}
         </ul>
     )
 }
 
 export default Allergens
-
-// export const query = graphql`
-//     query {
-//         allergenData: allFile(
-//             filter: {
-//                 relativeDirectory: { eq: "alergenos" }
-//                 extension: { eq: "png" }
-//             }
-//         ) {
-//             totalCount
-//             edges {
-//                 node {
-//                     childImageSharp {
-//                         fluid {
-//                             src
-//                             originalName
-//                         }
-//                     }
-//                 }
-//             }
-//         }
-//     }
-// `
