@@ -12,10 +12,13 @@
         }
 
         text-align: center;
+    }
+    &__item {
+        padding: $pd-tiny 0;
+        @include flex-center-column;
+    }
 
-        &__item {
-            width: 5rem;
-            height: 7rem;
-        }
+    &__text {
+        font-size: 1.6rem;
     }
 }

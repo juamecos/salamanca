@@ -14,36 +14,41 @@ import Sesamo from '../images/alergenos/sesamo.inline.svg'
 import Sulfitos from '../images/alergenos/sulfitos.inline.svg'
 import Soja from '../images/alergenos/soja.inline.svg'
 
-const propierties = {
-    viewBox: '0 0 263 372',
-    width: '80',
-    height: '80',
+const properties = {
+    viewBox: '0 0 263 263',
+    width: '50',
+    height: '50',
 }
 
 export const AllergensComponents = [
-    <Gluten {...propierties} />,
-    <Crustaceos {...propierties} />,
-    <Huevo {...propierties} />,
-    <Pescado {...propierties} />,
-    <Cacahuetes {...propierties} />,
-    <Lacteos {...propierties} />,
-    <Frutos {...propierties} />,
-    <Apio {...propierties} />,
-    <Mostaza {...propierties} />,
-    <Altramuces {...propierties} />,
-    <Moluscos {...propierties} />,
-    <Sesamo {...propierties} />,
-    <Sulfitos {...propierties} />,
-    <Soja {...propierties} />,
+    <Gluten {...properties} />,
+    <Crustaceos {...properties} />,
+    <Huevo {...properties} />,
+    <Pescado {...properties} />,
+    <Cacahuetes {...properties} />,
+    <Lacteos {...properties} />,
+    <Frutos {...properties} />,
+    <Apio {...properties} />,
+    <Mostaza {...properties} />,
+    <Altramuces {...properties} />,
+    <Moluscos {...properties} />,
+    <Sesamo {...properties} />,
+    <Sulfitos {...properties} />,
+    <Soja {...properties} />,
 ]
 
 const Allergens = () => {
     return (
         <ul className="allergen__list">
             {AllergensComponents.map((item, index) => (
-                <li className="allergen__item" key={index}>
-                    {item}
-                </li>
+                <div className="allergen__item" key={index}>
+                    <div className="allergen__svg">
+                        {item}
+                        <div className="allergen__text">
+                            {item.type.name.split('Inline')}
+                        </div>
+                    </div>
+                </div>
             ))}
         </ul>
     )

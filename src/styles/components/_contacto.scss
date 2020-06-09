@@ -1,0 +1,40 @@
+.contacto {
+    background-color: $color-sand-light;
+
+    &__container {
+        margin: 0 auto;
+        max-width: 50rem;
+        width: $container-width;
+    }
+
+    &__content {
+        text-align: center;
+        margin-top: -$pd-small;
+        background-color: $color-white;
+        padding: $pd-small 0;
+        box-shadow: $light-shadow;
+    }
+
+    &__heading {
+        color: $color-primary-dark;
+        padding-bottom: $pd-small;
+    }
+
+    &__paragraph {
+        color: $color-secondary;
+        padding-bottom: $pd-small;
+    }
+
+    &__tel-link {
+        display: block;
+    }
+
+    &__subheading {
+        font-size: 4rem;
+        padding-bottom: $pd-small;
+    }
+
+    &__icon {
+        padding-right: $pd-tiny;
+    }
+}

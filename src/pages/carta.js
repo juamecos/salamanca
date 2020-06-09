@@ -4,7 +4,7 @@ import { graphql } from 'gatsby'
 import StyledBackgroundSection from '../components/StyledBackgroundSection'
 import TagList from '../components/Carta/TagList'
 
-const carta = ({ data, location }) => {
+const carta = ({ data }) => {
     return (
         <Layout>
             <StyledBackgroundSection

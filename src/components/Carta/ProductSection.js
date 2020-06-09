@@ -1,16 +1,38 @@
 import React from 'react'
 import Title from '../Title'
-import { getInfo } from '../Carta/TagList'
+import { useStaticQuery, graphql } from 'gatsby'
+
+import AniLink from 'gatsby-plugin-transition-link/AniLink'
 
 import ProductCard from './ProductCard'
 
-console.log('from porduct section', typeof getInfo)
+export const getCategories = graphql`
+    query {
+        categories: allDatoCmsCategorie(
+            filter: { locale: { eq: "es" } }
+            sort: { fields: orden }
+        ) {
+            edges {
+                node {
+                    slug
+                    category
+                }
+            }
+        }
+    }
+`
 
 const ProductSection = ({ data, location }) => {
+    const response = useStaticQuery(getCategories)
+    const categories = response.categories.edges
+    const pathName = location.pathname.split('/')[2]
+    const flt = categories.filter(item => item.node.slug === pathName)
+    const category = flt[0].node.category
+
     return (
         <section className="product">
             <div className="product__center">
-                <Title title="Nuestros" />
+                <Title title={category} />
 
                 <ul className="product__list">
                     {data.edges.map((item, index) => {
@@ -23,6 +45,14 @@ const ProductSection = ({ data, location }) => {
                         )
                     })}
                 </ul>
+                <AniLink
+                    fade
+                    to="/carta"
+                    alt={`link a Carta`}
+                    className="btn btn--section"
+                >
+                    Volver a Carta
+                </AniLink>
             </div>
         </section>
     )

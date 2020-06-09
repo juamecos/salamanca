@@ -55,6 +55,15 @@ const TagList = () => {
                     )
                 })}
             </div>
+
+            <AniLink
+                fade
+                to="/contacto"
+                className="btn btn--section"
+                alt="button to reserva"
+            >
+                Reserva
+            </AniLink>
         </section>
     )
 }

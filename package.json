@@ -16,7 +16,9 @@
   "dependencies": {
     "@loadable/component": "^5.12.0",
     "@loadable/server": "^5.12.0",
+    "acorn": "^6.4.1",
     "babel-plugin-styled-components": "^1.10.7",
+    "core-js": "^3.6.5",
     "dotenv": "^8.2.0",
     "gatsby": "^2.21.33",
     "gatsby-background-image": "^1.1.1",

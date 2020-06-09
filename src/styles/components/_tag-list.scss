@@ -6,6 +6,7 @@
         margin: 0 auto;
         max-width: 50rem;
         width: $container-width;
+        padding-bottom: $pd-big;
 
         @include large {
             align-items: center;
