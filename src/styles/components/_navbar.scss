@@ -100,13 +100,10 @@
             &:hover {
                 color: lighten($color-secondary, 40%);
             }
-        }
 
-        @include large {
-            height: auto;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
+            @include large {
+                font-size: 1.4rem;
+            }
         }
     }
 

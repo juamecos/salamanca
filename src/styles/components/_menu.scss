@@ -1,0 +1,45 @@
+.menu {
+    &__container {
+        margin: 0 auto;
+        max-width: 50rem;
+        width: $container-width;
+    }
+
+    &__content {
+        text-align: center;
+        margin-top: -$pd-small;
+        background-color: $color-white;
+        padding: $pd-small 0;
+        text-align: center;
+    }
+
+    &__group {
+        padding-bottom: $pd-large;
+    }
+
+    &__heading {
+        padding-bottom: $pd-medium;
+    }
+
+    // &__platos {
+    // }
+
+    &__plato {
+        &:not(:last-child) {
+            padding-bottom: $pd-small;
+        }
+    }
+
+    &__incluido {
+        padding-bottom: $pd-small;
+    }
+
+    &__precio {
+        padding-bottom: $pd-small;
+        font-style: italic;
+    }
+
+    &__aparte {
+        margin-top: $pd-tiny;
+    }
+}

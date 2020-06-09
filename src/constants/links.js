@@ -12,6 +12,10 @@ export default [
         text: 'carta',
     },
     {
+        path: '/menu',
+        text: 'menú del día',
+    },
+    {
         path: '/contacto',
         text: 'contacto',
     },

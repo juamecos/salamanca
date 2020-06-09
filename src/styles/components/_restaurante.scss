@@ -1,0 +1,27 @@
+.restaurante {
+    &__container {
+        margin: 0 auto;
+        max-width: 50rem;
+        width: $container-width;
+    }
+
+    &__content {
+        text-align: center;
+        margin-top: -$pd-large;
+        padding-bottom: $pd-large;
+    }
+    &__heading {
+        color: $color-primary;
+        padding: $pd-large;
+    }
+
+    &__paragraph {
+        text-align: start;
+        font-size: 1.8rem;
+        padding-bottom: $pd-large;
+    }
+
+    &__image {
+        box-shadow: $light-shadow;
+    }
+}
