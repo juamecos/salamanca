@@ -18,6 +18,7 @@
     }
 
     &__heading {
+        color: $color-secondary;
         padding-bottom: $pd-medium;
     }
 
@@ -31,12 +32,14 @@
     }
 
     &__incluido {
+        color: $color-secondary;
         padding-bottom: $pd-small;
     }
 
     &__precio {
         padding-bottom: $pd-small;
         font-style: italic;
+        color: $color-primary;
     }
 
     &__aparte {

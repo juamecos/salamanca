@@ -20,6 +20,23 @@ const properties = {
     height: '50',
 }
 
+const allergenName = [
+    'Gluten',
+    'Crustáceos',
+    'Huevo',
+    'Pescado',
+    'Cacahuetes',
+    'Lácteos',
+    'Frutos secos',
+    'Apio',
+    'Mostaza',
+    'Altramuces',
+    'Moluscos',
+    'Sésamo',
+    'Sulfitos',
+    'Soja',
+]
+
 export const AllergensComponents = [
     <Gluten {...properties} />,
     <Crustaceos {...properties} />,
@@ -45,7 +62,7 @@ const Allergens = () => {
                     <div className="allergen__svg">
                         {item}
                         <div className="allergen__text">
-                            {item.type.name.split('Inline')}
+                            {allergenName[index]}
                         </div>
                     </div>
                 </div>

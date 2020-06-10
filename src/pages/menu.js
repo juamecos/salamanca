@@ -5,6 +5,12 @@ import StyledBackgroundSection from '../components/StyledBackgroundSection'
 import Title from '../components/Title'
 
 const restaurante = ({ data }) => {
+    console.log(data)
+    const primeros = data.primeros.edges
+    const segundos = data.segundos.edges
+    const incluido = data.incluido.edges
+    console.log(primeros)
+
     return (
         <Layout>
             <StyledBackgroundSection
@@ -20,50 +26,44 @@ const restaurante = ({ data }) => {
                         <div className="menu__group">
                             <h2 className="menu__heading">Primeros</h2>
                             <ul className="menu__platos">
-                                <li className="menu__plato">
-                                    <div className="menu__item">
-                                        Ensalada Valenciana
-                                    </div>
-                                </li>
-                                <li className="menu__plato">
-                                    <div className="menu__item">
-                                        Ensalada de chipirones
-                                    </div>
-                                </li>
-                                <li className="menu__plato">
-                                    <div className="menu__item">
-                                        Mejillones al Vapor
-                                    </div>
-                                </li>
+                                {primeros.map(item => {
+                                    return (
+                                        <li
+                                            className="menu__plato"
+                                            key={item.node.titulo}
+                                        >
+                                            <div className="menu__item">
+                                                {item.node.titulo}
+                                            </div>
+                                        </li>
+                                    )
+                                })}
                             </ul>
                         </div>
                         <div className="menu__group">
                             <h2 className="menu__heading">Segundos</h2>
                             <ul className="menu__platos">
-                                <li className="menu__plato">
-                                    <div className="menu__item">
-                                        Paella de marisco
-                                    </div>
-                                </li>
-                                <li className="menu__plato">
-                                    <div className="menu__item">
-                                        Ensalada de chipirones
-                                    </div>
-                                </li>
-                                <li className="menu__plato">
-                                    <div className="menu__item">
-                                        Mejillones al Vapor
-                                    </div>
-                                </li>
+                                {segundos.map(item => {
+                                    return (
+                                        <li
+                                            className="menu__plato"
+                                            key={item.node.titulo}
+                                        >
+                                            <div className="menu__item">
+                                                {item.node.titulo}
+                                            </div>
+                                        </li>
+                                    )
+                                })}
                             </ul>
                         </div>
                         <h2 className="menu__incluido">
-                            Pan, Postre y café incluidos
+                            {incluido[0].node.incluido}
                         </h2>
-                        <h3 className="menu__precio">13.50 EUR</h3>
-                        <p className="menu__aparte">bebida aparte</p>
+                        <h3 className="menu__precio">{`${incluido[0].node.precioMenu}0 EUR`}</h3>
+                        <p className="menu__aparte">Bebida aparte</p>
                         <p className="menu__aparte">
-                            suplemento carajillo 0.50 EUR
+                            {incluido[0].node.suplemento}
                         </p>
                     </div>
                 </div>
@@ -80,6 +80,31 @@ export const query = graphql`
             childImageSharp {
                 fluid(quality: 90, maxWidth: 4160) {
                     ...GatsbyImageSharpFluid_withWebp
+                }
+            }
+        }
+        primeros: allDatoCmsPrimero {
+            edges {
+                node {
+                    titulo
+                    alergenos
+                }
+            }
+        }
+        segundos: allDatoCmsSegundo {
+            edges {
+                node {
+                    titulo
+                    alergenos
+                }
+            }
+        }
+        incluido: allDatoCmsIncluidomenu {
+            edges {
+                node {
+                    incluido
+                    precioMenu
+                    suplemento
                 }
             }
         }
