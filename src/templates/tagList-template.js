@@ -15,7 +15,7 @@ const Template = ({ data, location }) => {
 
 export const query = graphql`
     query {
-        tapas: allDatoCmsTapa {
+        tapas: allDatoCmsTapa(sort: { fields: orden }) {
             edges {
                 node {
                     titulo
@@ -26,7 +26,7 @@ export const query = graphql`
                 }
             }
         }
-        entrantes: allDatoCmsEntrante {
+        entrantes: allDatoCmsEntrante(sort: { fields: orden }) {
             edges {
                 node {
                     titulo
@@ -37,7 +37,7 @@ export const query = graphql`
                 }
             }
         }
-        ensaladas: allDatoCmsEnsalada {
+        ensaladas: allDatoCmsEnsalada(sort: { fields: orden }) {
             edges {
                 node {
                     titulo
@@ -48,7 +48,7 @@ export const query = graphql`
                 }
             }
         }
-        carne: allDatoCmsCarne {
+        carne: allDatoCmsCarne(sort: { fields: orden }) {
             edges {
                 node {
                     titulo
@@ -70,7 +70,7 @@ export const query = graphql`
                 }
             }
         }
-        arroces: allDatoCmsArroz {
+        arroces: allDatoCmsArroz(sort: { fields: orden }) {
             edges {
                 node {
                     titulo

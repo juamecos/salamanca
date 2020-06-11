@@ -60,7 +60,7 @@ const restaurante = ({ data }) => {
                         <h2 className="menu__incluido">
                             {incluido[0].node.incluido}
                         </h2>
-                        <h3 className="menu__precio">{`${incluido[0].node.precioMenu}0 EUR`}</h3>
+                        <h3 className="menu__precio">{`${incluido[0].node.precioMenu} EUR`}</h3>
                         <p className="menu__aparte">Bebida aparte</p>
                         <p className="menu__aparte">
                             {incluido[0].node.suplemento}

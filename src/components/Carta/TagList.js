@@ -61,6 +61,7 @@ const TagList = () => {
                 to="/contacto"
                 className="btn btn--section"
                 alt="button to reserva"
+                rel="noopener noreferrer"
             >
                 Reserva
             </AniLink>

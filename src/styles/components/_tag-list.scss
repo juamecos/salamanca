@@ -13,7 +13,7 @@
             display: grid;
             gap: 5%;
             grid-template-columns: repeat(2, 1fr);
-            margin-bottom: $mg-big;
+            margin-bottom: 14rem;
             max-width: 70%;
         }
 
@@ -26,9 +26,16 @@
     &__item {
         box-shadow: 2px 5px 3px 0px #757a848a;
         color: #142850;
-        margin-bottom: 6rem;
         overflow: hidden;
         transition: 2s transform ease-out;
+
+        &:not(:last-child) {
+            margin-bottom: 6rem;
+        }
+
+        @include large {
+            margin-bottom: 6rem;
+        }
     }
 
     &__image {

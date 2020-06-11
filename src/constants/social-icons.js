@@ -12,6 +12,6 @@ export default [
     },
     {
         icon: <FaPhoneSquare />,
-        url: 'tel:0034961722712',
+        url: 'tel:+34961722712',
     },
 ]

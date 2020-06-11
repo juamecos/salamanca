@@ -10,9 +10,6 @@
         padding: $pd-medium;
 
         @include large {
-            flex-direction: row;
-            align-items: flex-start;
-            justify-content: space-between;
             margin: 0 auto;
             max-width: 80%;
         }
@@ -20,7 +17,12 @@
 
     &__logo {
         margin: 0 auto;
-        width: 30vw;
+        padding-bottom: $pd-medium;
+        width: 20rem;
+
+        @include large {
+            width: 25vw;
+        }
     }
 
     & .social-icons {
@@ -35,7 +37,6 @@
 
         @include large {
             align-items: flex-start;
-            flex-direction: column;
             margin: 0 $mg-medium;
             max-width: none;
             min-width: 0;
@@ -58,12 +59,13 @@
     &__links {
         color: $color-white;
         height: 100%;
-        padding: $pd-medium 0;
+        padding: $pd-large 0;
         text-align: center;
 
         @include large {
-            @include flex-center-column;
-            align-items: flex-start;
+            @include flex-center;
+
+            margin: $mg-small;
             padding: 0;
         }
     }
@@ -84,15 +86,43 @@
         & > * {
             display: block;
             letter-spacing: $mainSpacing;
-            padding: $pd-tiny 0;
+            padding: $pd-small 0;
             text-decoration: none;
             text-transform: capitalize;
             transition: $mainTransition;
+
+            @include large {
+                letter-spacing: normal;
+            }
+        }
+    }
+
+    &__location {
+        color: $color-white;
+
+        &--link {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: $pd-medium;
+            transition: $mainTransition;
+            &:hover {
+                color: lighten($color-secondary, 40%);
+            }
+        }
+        &--icon {
+            font-size: 3rem;
+            padding-right: $pd-tiny;
+        }
+
+        &--address {
+            font-size: 2.2rem;
         }
     }
 
     &__copyright {
         color: $color-white;
+        font-size: 1.6rem;
         padding: $pd-tiny 0;
         text-align: center;
     }
