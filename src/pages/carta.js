@@ -3,10 +3,14 @@ import Layout from '../components/Layout'
 import { graphql } from 'gatsby'
 import StyledBackgroundSection from '../components/StyledBackgroundSection'
 import TagList from '../components/Carta/TagList'
+import SEO from '../components/SEO'
+
+//Carta is rendering tag-lists. Data is taken as props from Template pulled from DatoCMS and passes data to Tag_List
 
 const carta = ({ data }) => {
     return (
         <Layout>
+            <SEO title="Carta" />
             <StyledBackgroundSection
                 className="cartaHero"
                 home={false}

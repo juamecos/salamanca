@@ -27,7 +27,8 @@ const Navbar = () => {
                         onClick={toggleNav}
                         alt="menu button"
                     >
-                        <FaAlignJustify className="navbar__mobilmenu--icon" />
+                        <FaAlignJustify className="navbar__mobile--icon" />
+                        <div className="navbar__mobile--text">MENÚ</div>
                     </button>
                 </div>
                 <ul className={navLinksClass}>
@@ -39,6 +40,7 @@ const Navbar = () => {
                                 alt={`Link to ${item.path}`}
                             >
                                 <AniLink
+                                    activeClassName="active"
                                     fade
                                     to={item.path}
                                     alt={`Link to ${item.text}`}

@@ -3,16 +3,17 @@ import Layout from '../components/Layout'
 import { graphql } from 'gatsby'
 import StyledBackgroundSection from '../components/StyledBackgroundSection'
 import Title from '../components/Title'
+import SEO from '../components/SEO'
 
 const restaurante = ({ data }) => {
     console.log(data)
     const primeros = data.primeros.edges
     const segundos = data.segundos.edges
     const incluido = data.incluido.edges
-    console.log(primeros)
 
     return (
         <Layout>
+            <SEO title="Menú del Día" />
             <StyledBackgroundSection
                 className="menu__hero"
                 home={false}
@@ -24,7 +25,12 @@ const restaurante = ({ data }) => {
                     <Title title="Nuestro" message="Menú del Día" />
                     <div className="menu__content">
                         <div className="menu__group">
-                            <h2 className="menu__heading">Primeros</h2>
+                            <h2 className="menu__heading">
+                                Entrantes{' '}
+                                <span className="menu__heading--span">
+                                    (min 2 personas)
+                                </span>
+                            </h2>
                             <ul className="menu__platos">
                                 {primeros.map(item => {
                                     return (
@@ -41,7 +47,12 @@ const restaurante = ({ data }) => {
                             </ul>
                         </div>
                         <div className="menu__group">
-                            <h2 className="menu__heading">Segundos</h2>
+                            <h2 className="menu__heading">
+                                Segundos{' '}
+                                <span className="menu__heading--span">
+                                    (a elegir)
+                                </span>
+                            </h2>
                             <ul className="menu__platos">
                                 {segundos.map(item => {
                                     return (
@@ -60,11 +71,11 @@ const restaurante = ({ data }) => {
                         <h2 className="menu__incluido">
                             {incluido[0].node.incluido}
                         </h2>
-                        <h3 className="menu__precio">{`${incluido[0].node.precioMenu} EUR`}</h3>
-                        <p className="menu__aparte">Bebida aparte</p>
+                        <h3 className="menu__precio">{`${incluido[0].node.precioMenu} EUR/persona`}</h3>
+                        {/* <p className="menu__aparte">Bebida aparte</p>
                         <p className="menu__aparte">
                             {incluido[0].node.suplemento}
-                        </p>
+                        </p> */}
                     </div>
                 </div>
             </section>

@@ -4,10 +4,12 @@ import { graphql } from 'gatsby'
 import StyledBackgroundSection from '../components/StyledBackgroundSection'
 import Title from '../components/Title'
 import { FaPhoneAlt } from 'react-icons/fa'
+import SEO from '../components/SEO'
 
 const contacto = ({ data }) => {
     return (
         <Layout>
+            <SEO title="Contacto" />
             <StyledBackgroundSection
                 className="contacto__hero"
                 home={false}

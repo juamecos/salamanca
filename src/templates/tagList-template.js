@@ -3,10 +3,20 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Products from '../components/Carta/Products'
 import Allergens from '../components/Allergens'
+import SEO from '../components/SEO'
+// This component renders the Products (Dishes) and Allergens
+// Data is pulled from DatoCMS pased to children as props
 
 const Template = ({ data, location }) => {
+    const path = location.pathname
+    const title = path
+        .split('/')[2]
+        .replace('-', ' ')
+        .replace('-', ' ')
+        .toUpperCase()
     return (
         <Layout>
+            <SEO title={title} />
             <Products data={data} location={location} />
             <Allergens />
         </Layout>

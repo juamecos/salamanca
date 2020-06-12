@@ -12,13 +12,17 @@ const error = ({ data }) => {
                 className="styledHero"
                 home={true}
                 image={data.error.childImageSharp.fluid}
+                style={{
+                    background: 'none;',
+                    opacity: '0;',
+                }}
             >
                 <Banner
                     title="¿Te sientes perdido?"
                     info="Esta página no existe"
                 >
                     <a
-                        href="/contacto"
+                        href="/"
                         className="btn btn--hero"
                         alt="button to inicio"
                     >

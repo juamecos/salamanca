@@ -94,6 +94,10 @@
             @include large {
                 letter-spacing: normal;
             }
+
+            &.active {
+                color: lighten($color-secondary, 40%);
+            }
         }
     }
 

@@ -4,10 +4,11 @@ import { graphql } from 'gatsby'
 import StyledBackgroundSection from '../components/StyledBackgroundSection'
 import Title from '../components/Title'
 import Img from 'gatsby-image'
-
+import SEO from '../components/SEO'
 const restaurante = ({ data }) => {
     return (
         <Layout>
+            <SEO title="Restaurante" />
             <StyledBackgroundSection
                 className="contacto__hero"
                 home={false}

@@ -51,18 +51,23 @@
             }
         }
     }
-    &__mobile--menu {
-        background: transparent;
-        border: none;
-        outline: none;
-        color: currentColor;
+    &__mobile {
+        &--menu {
+            background: transparent;
+            border: none;
+            outline: none;
+            color: currentColor;
 
-        &:hover {
-            cursor: pointer;
+            &:hover {
+                cursor: pointer;
+            }
+
+            @include large {
+                display: none;
+            }
         }
-
-        @include large {
-            display: none;
+        &--text {
+            font-size: 1rem;
         }
     }
 
@@ -97,7 +102,8 @@
             text-decoration: none;
             text-transform: capitalize;
             transition: $mainTransition;
-            &:hover {
+            &:hover,
+            &.active {
                 color: lighten($color-secondary, 40%);
             }
 

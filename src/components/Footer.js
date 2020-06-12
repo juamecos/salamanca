@@ -24,6 +24,7 @@ const Footer = () => {
                             >
                                 <AniLink
                                     fade
+                                    activeClassName="active"
                                     to={item.path}
                                     alt={`Link to ${item.text}`}
                                 >

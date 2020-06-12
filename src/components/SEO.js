@@ -19,7 +19,6 @@ export const getData = graphql`
 //TODO create SEO for all pages with proper data
 const SEO = ({ title, description }) => {
     const { site } = useStaticQuery(getData)
-    console.log(site.siteMetadata.siteDesc)
 
     const {
         siteDesc,
