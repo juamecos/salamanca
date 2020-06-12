@@ -106,6 +106,12 @@ module.exports = {
             },
         },
         `gatsby-plugin-react-helmet`,
+        {
+            resolve: `gatsby-plugin-canonical-urls`,
+            options: {
+                siteUrl: `http://restaurantesalamancacullera.com/`,
+            },
+        },
         `gatsby-plugin-sharp`,
         `gatsby-plugin-styled-components`,
         `gatsby-transformer-sharp`,
