@@ -26,6 +26,10 @@ const BackgroundSection = ({ className, children, home, image }) => (
                     className={className}
                     fluid={image || imageData}
                     home={home}
+                    style={{
+                        background: 'none;',
+                        opacity: '0;',
+                    }}
                 >
                     {children}
                 </BackgroundImage>
