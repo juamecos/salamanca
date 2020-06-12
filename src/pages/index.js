@@ -7,9 +7,11 @@ import { graphql } from 'gatsby'
 import About from '../components/Home/SectionAbout'
 import Especialidades from '../components/Home/SectionEspecialidades'
 import StyledParallaxComponent from '../components/ParallaxComponent'
+import SEO from '../components/SEO'
 
 export default ({ data }) => (
     <Layout>
+        <SEO title="Inicio" description="this is description" />
         <StyledBackgroundSection
             className="styledHero"
             home={true}

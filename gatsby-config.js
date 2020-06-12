@@ -13,9 +13,10 @@ module.exports = {
         title: `Restaurante Salamanca`,
         siteUrl: `https://www.gatsbyjs.org`,
         description: `Cocina mediterránea a la orilla del mar. Especialidad en mariscadas, zarzuelas, arroces y tapas. Fundado en 1991.`,
+        author: '@JuanJosMenaCost',
         twitterUsername: '@JuanJosMenaCost',
         image: '/hero-image.jpg',
-        siteUrl: 'https://gatsby-contentful-portfolio-blog.netlify.app/',
+        siteUrl: 'http://restaurantesalamancacullera.com',
     },
 
     plugins: [
@@ -77,12 +78,6 @@ module.exports = {
                 // },
             },
         },
-        {
-            resolve: 'gatsby-plugin-react-leaflet',
-            options: {
-                linkStyles: true, // (default: true) Enable/disable loading stylesheets via CDN
-            },
-        },
         `gatsby-plugin-react-helmet`,
         {
             resolve: `gatsby-plugin-sass`,
@@ -110,7 +105,7 @@ module.exports = {
                 },
             },
         },
-
+        `gatsby-plugin-react-helmet`,
         `gatsby-plugin-sharp`,
         `gatsby-plugin-styled-components`,
         `gatsby-transformer-sharp`,
