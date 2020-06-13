@@ -72,21 +72,21 @@ export const query = graphql`
     query {
         restaurante: file(relativePath: { eq: "restaurante.jpg" }) {
             childImageSharp {
-                fluid(quality: 90, maxWidth: 4160) {
+                fluid(quality: 90, maxWidth: 1900) {
                     ...GatsbyImageSharpFluid_withWebp
                 }
             }
         }
         paellas: file(relativePath: { eq: "paellas.jpg" }) {
             childImageSharp {
-                fluid(quality: 90, maxWidth: 4160) {
+                fluid(quality: 90, maxWidth: 600) {
                     ...GatsbyImageSharpFluid_withWebp
                 }
             }
         }
         sangria: file(relativePath: { eq: "sangria.jpg" }) {
             childImageSharp {
-                fluid(quality: 90, maxWidth: 4160) {
+                fluid(quality: 90, maxWidth: 600) {
                     ...GatsbyImageSharpFluid_withWebp
                 }
             }

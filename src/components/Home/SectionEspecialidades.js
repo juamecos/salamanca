@@ -45,7 +45,7 @@ const SectionEspecialidades = ({ data }) => {
                 alt="Boton a página carta"
                 className="btn btn--section"
             >
-                Carta
+                Ver Carta
             </AniLink>
         </Section>
     )
@@ -55,7 +55,7 @@ export const getEspecialidades = graphql`
     query especialidades {
         zarzuela: file(relativePath: { eq: "zarzuela.jpg" }) {
             childImageSharp {
-                fluid {
+                fluid(maxWidth: 500) {
                     ...GatsbyImageSharpFluid
                 }
             }
@@ -64,14 +64,14 @@ export const getEspecialidades = graphql`
             relativePath: { eq: "paella-bogavante-1440.jpg" }
         ) {
             childImageSharp {
-                fluid {
+                fluid(maxWidth: 500) {
                     ...GatsbyImageSharpFluid
                 }
             }
         }
         mariscada: file(relativePath: { eq: "mariscada-1440.jpg" }) {
             childImageSharp {
-                fluid {
+                fluid(maxWidth: 500) {
                     ...GatsbyImageSharpFluid
                 }
             }

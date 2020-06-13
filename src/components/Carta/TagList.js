@@ -16,7 +16,7 @@ export const getInfo = graphql`
                     slug
                     category
                     imagencategory {
-                        fluid {
+                        fluid(maxWidth: 600) {
                             ...GatsbyDatoCmsFluid_noBase64
                         }
                     }

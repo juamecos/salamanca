@@ -11,7 +11,7 @@
         text-align: center;
         margin-top: -$pd-small;
         background-color: $color-white;
-        padding: $pd-small 0;
+        padding: $pd-large 0;
         box-shadow: $light-shadow;
     }
 
@@ -25,16 +25,16 @@
         padding-bottom: $pd-small;
     }
 
-    &__tel-link {
-        display: block;
+    &__tel--link {
+        @include flex-center;
     }
 
     &__subheading {
-        font-size: 4rem;
-        padding-bottom: $pd-small;
+        font-size: 2rem;
     }
 
     &__icon {
+        font-size: 2.4rem;
         padding-right: $pd-tiny;
     }
 }

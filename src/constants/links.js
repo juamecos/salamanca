@@ -1,7 +1,7 @@
 export default [
     {
         path: '/',
-        text: 'inicio',
+        text: 'home',
     },
     {
         path: '/restaurante',

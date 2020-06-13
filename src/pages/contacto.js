@@ -27,11 +27,12 @@ const contacto = ({ data }) => {
                         <a
                             href="tel:+34961722712"
                             alt="enlace a llamanos"
-                            className="contacto__tel-link"
+                            className="contacto__tel--link btn btn--section"
                         >
-                            <h2 className="contacto__subheading">¡Llámanos!</h2>
                             <FaPhoneAlt className="contacto__icon" />
-                            961722712
+                            <div className="contacto__subheading">
+                                ¡Llámanos!
+                            </div>
                         </a>
                     </div>
                 </div>
@@ -45,7 +46,7 @@ export const query = graphql`
     query {
         message: file(relativePath: { eq: "messageInBottle.jpg" }) {
             childImageSharp {
-                fluid(quality: 90, maxWidth: 4160) {
+                fluid(quality: 90, maxWidth: 1900) {
                     ...GatsbyImageSharpFluid_withWebp
                 }
             }
