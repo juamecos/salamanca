@@ -79,14 +79,14 @@ export const query = graphql`
         }
         paellas: file(relativePath: { eq: "paellas.jpg" }) {
             childImageSharp {
-                fluid(quality: 90, maxWidth: 600) {
+                fluid(quality: 80, maxWidth: 500) {
                     ...GatsbyImageSharpFluid_withWebp
                 }
             }
         }
         sangria: file(relativePath: { eq: "sangria.jpg" }) {
             childImageSharp {
-                fluid(quality: 90, maxWidth: 600) {
+                fluid(quality: 80, maxWidth: 500) {
                     ...GatsbyImageSharpFluid_withWebp
                 }
             }

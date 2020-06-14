@@ -27,8 +27,8 @@ const Navbar = () => {
                         onClick={toggleNav}
                         alt="menu button"
                     >
-                        <FaAlignJustify className="navbar__mobile--icon" />
                         <div className="navbar__mobile--text">MENÚ</div>
+                        <FaAlignJustify className="navbar__mobile--icon" />
                     </button>
                 </div>
                 <ul className={navLinksClass}>

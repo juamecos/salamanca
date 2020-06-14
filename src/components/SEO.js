@@ -35,6 +35,7 @@ const SEO = ({ title, description }) => {
         >
             <meta name="description" content={description || siteDesc} />
             <meta name="image" content={image} />
+            <meta name="author" content={author}></meta>
 
             {/* facebook cards */}
             <meta name="og:url" content={siteURL} />

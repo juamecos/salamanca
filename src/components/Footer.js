@@ -4,13 +4,14 @@ import AniLink from 'gatsby-plugin-transition-link/AniLink'
 import loadable from '@loadable/component'
 import Logotext from '../images/logotext.inline.svg'
 import { FaMapMarkerAlt } from 'react-icons/fa'
+import legal from '../constants/legal'
 
 // const Location = loadable(() => import('./Location'))
 const SocialIcons = loadable(() => import('./SocialIcons'))
 
 const Footer = () => {
     return (
-        <div className="footer">
+        <footer className="footer">
             <div className="footer__container">
                 <Logotext className="footer__logo" alt="logo" />
                 <SocialIcons showInSmallDevices={true} />
@@ -48,12 +49,31 @@ const Footer = () => {
                         </div>
                     </a>
                 </div>
+                <div className="footer__divider"></div>
+                <ul className="footer__legal">
+                    {legal.map((item, index) => {
+                        return (
+                            <li className="footer__legal--item" key={index}>
+                                <AniLink
+                                    swipe
+                                    direction="up"
+                                    duration={0.5}
+                                    to={item.path}
+                                    alt={`link a ${item.text}`}
+                                    activeClassName="footer__legal--active"
+                                >
+                                    {item.text}
+                                </AniLink>
+                            </li>
+                        )
+                    })}
+                </ul>
                 <div className="footer__copyright">
                     copyright &copy; Rte. Salamanca {new Date().getFullYear()}
                     <div> todos los derechos reservados</div>
                 </div>
             </div>
-        </div>
+        </footer>
     )
 }
 

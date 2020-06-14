@@ -71,7 +71,7 @@ export const getEspecialidades = graphql`
         }
         mariscada: file(relativePath: { eq: "mariscada-1440.jpg" }) {
             childImageSharp {
-                fluid(maxWidth: 500) {
+                fluid(maxWidth: 400) {
                     ...GatsbyImageSharpFluid
                 }
             }

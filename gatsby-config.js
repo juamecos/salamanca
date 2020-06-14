@@ -16,7 +16,7 @@ module.exports = {
         author: '@JuanJosMenaCost',
         twitterUsername: '@JuanJosMenaCost',
         image: '/hero-image.jpg',
-        siteUrl: 'http://restaurantesalamancacullera.com',
+        siteUrl: 'https://quizzical-bartik-845093.netlify.app/',
     },
 
     plugins: [
@@ -99,8 +99,8 @@ module.exports = {
                         'xmlnsSvg',
                         'xmlnsSodipodi',
                         'xmlnsInkscape',
-                        // 'sodipodiDocname',
-                        // 'inkscapeVersion',
+                        'sodipodiDocname',
+                        'inkscapeVersion',
                     ],
                 },
             },
@@ -109,7 +109,7 @@ module.exports = {
         {
             resolve: `gatsby-plugin-canonical-urls`,
             options: {
-                siteUrl: `http://restaurantesalamancacullera.com/`,
+                siteUrl: `https://quizzical-bartik-845093.netlify.app/`,
             },
         },
         `gatsby-plugin-sharp`,

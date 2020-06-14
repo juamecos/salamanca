@@ -11,23 +11,25 @@
 
         @include large {
             margin: 0 auto;
-            max-width: 80%;
+            max-width: 750%;
         }
     }
 
     &__logo {
         margin: 0 auto;
-        padding-bottom: $pd-medium;
-        width: 20rem;
+        // padding-bottom: $pd-small;
+        width: 16rem;
 
         @include large {
             width: 25vw;
+            margin-bottom: $mg-small;
         }
     }
 
     & .social-icons {
         @include flex-center;
-        justify-content: space-around;
+        max-width: 20rem;
+        margin: 0 auto;
 
         @include mobile {
             margin: 0 auto;
@@ -45,13 +47,12 @@
 
         & a {
             font-size: 3rem;
+            &:not(:last-child) {
+                margin-right: $pd-small;
+            }
 
             @include large {
-                font-size: 4rem;
-
-                &:not(:last-child) {
-                    padding-bottom: $pd-small;
-                }
+                font-size: 3.3rem;
             }
         }
     }
@@ -59,12 +60,13 @@
     &__links {
         color: $color-white;
         height: 100%;
-        padding: $pd-large 0;
+        padding: $pd-small 0;
         text-align: center;
+        font-size: 1.4rem;
 
         @include large {
             @include flex-center;
-
+            font-size: 1.2rem;
             margin: $mg-small;
             padding: 0;
         }
@@ -72,7 +74,7 @@
 
     &__link {
         @include large {
-            font-size: 2rem;
+            font-size: 1.6rem;
 
             &:not(:last-child) {
                 padding-right: $pd-large;
@@ -86,7 +88,7 @@
         & > * {
             display: block;
             letter-spacing: $mainSpacing;
-            padding: $pd-small 0;
+            padding: $pd-small * 2/3 0;
             text-decoration: none;
             text-transform: capitalize;
             transition: $mainTransition;
@@ -115,18 +117,54 @@
             }
         }
         &--icon {
-            font-size: 3rem;
+            font-size: 2.4rem;
             padding-right: $pd-tiny;
         }
 
         &--address {
-            font-size: 2.2rem;
+            font-size: 1.8rem;
+        }
+    }
+
+    &__divider {
+        background-color: $color-white;
+        height: 1px;
+        margin: 0 auto $mg-small;
+        width: 30%;
+    }
+
+    &__legal {
+        color: $color-white;
+        text-align: center;
+        margin-bottom: $mg-medium;
+        font-size: 1.4rem;
+        &--item:not(:last-child) {
+            margin-bottom: $mg-small;
+            &:hover {
+                color: lighten($color-secondary, 40%);
+            }
+        }
+
+        &--active {
+            color: lighten($color-secondary, 40%);
+        }
+
+        @include large {
+            @include flex-center;
+            justify-content: space-around;
+            margin: 0 auto $mg-tiny;
+            max-width: 50%;
+
+            &--item:not(:last-child) {
+                margin-bottom: 0;
+                margin-right: $mg-small;
+            }
         }
     }
 
     &__copyright {
         color: $color-white;
-        font-size: 1.6rem;
+        font-size: 1.4rem;
         padding: $pd-tiny 0;
         text-align: center;
     }
