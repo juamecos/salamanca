@@ -116,7 +116,7 @@ module.exports = {
             resolve: `gatsby-plugin-manifest`,
             options: {
                 name: `Restaurante Salamanca`,
-                short_name: `Cocina mediterrénea a la orilla del mar`,
+                short_name: `Restaurante Salamanca`,
                 start_url: `/`,
                 background_color: `#27496d`,
                 theme_color: `#27496d`,
