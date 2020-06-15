@@ -1,5 +1,5 @@
 import React from 'react'
-import Logotext from '../images/logotext.inline.svg'
+import Logotext from '../images/logohero.inline.svg'
 
 const Banner = ({ info, children }) => {
     return (

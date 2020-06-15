@@ -112,6 +112,29 @@ module.exports = {
                 siteUrl: `https://quizzical-bartik-845093.netlify.app/`,
             },
         },
+        {
+            resolve: `gatsby-plugin-manifest`,
+            options: {
+                name: `Restaurante Salamanca`,
+                short_name: `Cocina mediterrénea a la orilla del mar`,
+                start_url: `/`,
+                background_color: `#27496d`,
+                theme_color: `#27496d`,
+                display: `standalone`,
+                cache_busting_mode: 'none',
+                icon: `src/images/logo-512x512.svg`,
+            },
+        },
+        `gatsby-plugin-offline`,
+        // {
+        //     resolve: 'gatsby-plugin-offline',
+        //     options: {
+        //         precachePages: [`/`, `/carta/*`],
+        //         workboxConfig: {
+        //             globPatterns: ['**/*'],
+        //         },
+        //     },
+        // },
         `gatsby-plugin-sharp`,
         `gatsby-plugin-styled-components`,
         `gatsby-transformer-sharp`,
