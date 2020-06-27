@@ -11,12 +11,11 @@ require('dotenv').config({
 module.exports = {
     siteMetadata: {
         title: `Restaurante Salamanca`,
-        siteUrl: `https://www.gatsbyjs.org`,
         description: `Cocina mediterránea a la orilla del mar. Especialidad en mariscadas, zarzuelas, arroces y tapas. Fundado en 1991.`,
         author: '@JuanJosMenaCost',
         twitterUsername: '@JuanJosMenaCost',
         image: '/hero-image.jpg',
-        siteUrl: 'https://quizzical-bartik-845093.netlify.app/',
+        siteUrl: 'https://www.restaurantesalamancacullera.com/',
     },
 
     plugins: [
