@@ -108,7 +108,7 @@ module.exports = {
         {
             resolve: `gatsby-plugin-canonical-urls`,
             options: {
-                siteUrl: `https://quizzical-bartik-845093.netlify.app/`,
+                siteUrl: `https://www.restaurantesalamancacullera.com/`,
             },
         },
         {
